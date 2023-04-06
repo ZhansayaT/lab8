@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="quiz.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+        </script>
+        <script src = "quiz.js">
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Quiz</h1>
+        </header>
+        <section class="main">
+            <div id="quiz-box"> </div>
+                <!-- <div class="question">
+                    <p class="d"> Q1. Which year Nazarbayev University was founded?</p>
+                    <label><input type="radio" name="q1" value="a">2010</label>
+                    <label><input type="radio" name="q1" value="b">2009</label>
+                    <label><input type="radio" name="q1" value="c">2008</label>
+                    <label><input type="radio" name="q1" value="d">2011</label>
+                </div>
+                <div class="question">
+                    <p class="d"> Q2. What is the capital of Kazakhstan?</p>
+                    <label><input type="radio" name="q2" value="a">Astana</label>
+                    <label><input type="radio" name="q2" value="b">Almaty</label>
+                    <label><input type="radio" name="q2" value="c">Shymkent</label>
+                    <label><input type="radio" name="q2" value="d">Karaganda</label>
+                </div> -->
+            
+        </section>
+        <button class="button-3">Check Answer</button>
+    </body>
+
+</html> 
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// Define quiz questions, answers, and choices
+		var questions = [
+			"Which year was Nazarbayev University founded?",
+			"What is the name of the first president of Kazakhstan?",
+			"What is the official code of Kazakhstan?",
+			"What programming language is used for web development?"
+		];
+		var answers = ["2009", "Nursultan Nazarbayev", "KZT", "JavaScript"];
+		var choice_options = [
+			["2009", "2010", "2011", "2012"],
+			["Kasym-Zhomart Tokayev", "Kassym-Jomart Tokayev", "Nursultan Nazarbayev", "Askar Mamin"],
+			["RUB", "USD", "KZT", "EUR"],
+			["Python", "Java", "C++", "JavaScript"]
+		];
+
+		// Generate quiz questions dynamically
+		var quizBox = $("#quiz-box");
+		for (var i = 0; i < questions.length; i++) {
+			var questionDiv = $("<div>").addClass("question");
+			questionDiv.append("<p class='d'>Q" + (i+1) + ". " + questions[i] + "</p>");
+			for (var j = 0; j < choice_options[i].length; j++) {
+				var choiceDiv = $("<div>").addClass("choice");
+				var choiceLabel = $("<label>");
+				var choiceInput = $("<input>").attr({
+					type: "radio",
+					name: "q" + (i+1),
+					value: choice_options[i][j]
+				});
+				choiceLabel.append(choiceInput);
+				choiceLabel.append(choice_options[i][j]);
+				choiceDiv.append(choiceLabel);
+				questionDiv.append(choiceDiv);
+			}
+			quizBox.append(questionDiv);
+		}
+
+		// Attach click event handler to the submit button
+		$("#submit-btn").click(function(event) {
+			var countCorrect = 0;
+			for (var i = 0; i < answers.length; i++) {
+				var userAnswer = $("input[name=q" + (i+1) + "]:checked").val();
+				if (userAnswer === answers[i]) {
+					countCorrect++;
+				}
+			}
+			$("#result").text("Your score is: " + countCorrect + " out of " + answers.length);
+		});
+	});
+	</script>
+	<style>
+	.question {
+		margin-bottom: 20px;
+	}
+	.choice {
+		margin-left: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="quiz-box">
+		quiz questions will be generated dynamically here -->
+	<!-- </div>
+	<button id="submit-btn">Submit</button>
+	<div id="result"></div>
+</body>
+</html> -->
